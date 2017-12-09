@@ -5,3 +5,8 @@ class Hamming
     [a, b].min.size.times.count { |i| a[i] != b[i] }
   end
 end
+
+module BookKeeping
+  VERSION = 3
+end
+
