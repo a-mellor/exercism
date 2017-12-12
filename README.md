@@ -1,3 +1,3 @@
-# Exercisim
+# Exercism
 
 http://www.exercism.io/
