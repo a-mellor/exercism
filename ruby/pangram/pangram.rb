@@ -1,11 +1,14 @@
 class Pangram
   ALPHABET = ('a'..'z').freeze
+  ALPHABET_LENGTH = ALPHABET.to_a.length
 
   def self.pangram?(sentence)
-    array_of_unique_chars(sentence).count { |x| ALPHABET.include?(x) } == 26
+    uniq_chars(sentence).count { |x| ALPHABET.include?(x) } == ALPHABET_LENGTH
   end
 
-  def self.array_of_unique_chars(sentence)
+  private 
+
+  def self.uniq_chars(sentence)
     sentence.downcase.chars.uniq
   end
 end
